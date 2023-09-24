@@ -1,4 +1,5 @@
-import React from "react";
+import { MdLocationOn } from "react-icons/md";
+import { AiOutlineDollar } from "react-icons/ai";
 
 const Job = ({ job }) => {
   const {
@@ -26,8 +27,20 @@ const Job = ({ job }) => {
             {job_type}
           </button>
         </div>
+        <div className="flex items-center gap-6 mt-4">
+          <p className="flex items-center">
+            <MdLocationOn className="text-2xl me-2"></MdLocationOn>
+            {location}
+          </p>
+          <p className="flex items-center">
+            <AiOutlineDollar className="text-2xl me-2"></AiOutlineDollar>
+            {salary}
+          </p>
+        </div>
         <div className="card-actions">
-          <button className="btn btn-primary">View Details</button>
+          <button className="bg-gradient-to-r hover:bg-gradient-to-l duration-300  from-[#7E90FE] to-[#9873FF] text-[20px] px-5 py-3 font-bold text-[#FFF] rounded-lg">
+            View Details
+          </button>
         </div>
       </div>
     </div>
