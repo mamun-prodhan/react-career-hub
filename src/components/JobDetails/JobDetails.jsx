@@ -12,7 +12,7 @@ const JobDetails = () => {
 
   const handleApplyJob = () => {
     setJobApplication(intJobId);
-    toast.success("Your have applied successfully");
+    toast.success("You have applied successfully");
   };
 
   return (
