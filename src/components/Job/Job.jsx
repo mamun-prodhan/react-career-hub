@@ -1,8 +1,10 @@
 import { MdLocationOn } from "react-icons/md";
 import { AiOutlineDollar } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Job = ({ job }) => {
   const {
+    id,
     logo,
     job_title,
     company_name,
@@ -38,9 +40,11 @@ const Job = ({ job }) => {
           </p>
         </div>
         <div className="card-actions">
-          <button className="bg-gradient-to-r hover:bg-gradient-to-l duration-300  from-[#7E90FE] to-[#9873FF] text-[20px] px-5 py-3 font-bold text-[#FFF] rounded-lg">
-            View Details
-          </button>
+          <Link to={`/job/${id}`}>
+            <button className="bg-gradient-to-r hover:bg-gradient-to-l duration-300  from-[#7E90FE] to-[#9873FF] text-[20px] px-5 py-3 font-bold text-[#FFF] rounded-lg">
+              View Details
+            </button>
+          </Link>
         </div>
       </div>
     </div>
